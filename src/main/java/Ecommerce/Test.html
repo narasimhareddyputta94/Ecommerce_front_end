@@ -6,6 +6,9 @@
     <title>Narasimha Wood Pressed Oils</title>
     <link rel="stylesheet" href="genericstyle.css">
     <style>
+        logo {
+            width: 200px;
+        }
         section {
             text-align: center;
         }
@@ -168,12 +171,333 @@
             line-height: 1.6;
             margin-top: 10px;
         }
+        .logo {
+            width: 100px;
+        }
+        .info-section {
+            display: flex;
+            flex-wrap: wrap; /* Allows items to wrap onto the next line as needed */
+            justify-content: space-around; /* Distributes space between and around content items */
+        }
+
+        .info-item {
+            flex: 1 1 20%; /* Each item can grow and shrink but starts with 20% of the flex container's width */
+            margin: 10px; /* Adds some space around each item */
+            box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+        }
+        /* Ensure that the parent container of info-section is set to full width */
+        .container { /* Assuming the parent has a class 'container' */
+            width: 100%; /* This makes sure the container takes full width of its parent */
+            max-width: 100%; /* Prevents it from extending beyond the viewport */
+            padding: 0; /* Adjust padding as necessary */
+            margin: 0 auto; /* Centers the container in the viewport */
+            box-sizing: border-box; /* Includes padding and border in the width and height */
+        }
+
+        .info-section {
+            display: flex;
+            flex-wrap: wrap; /* Allows items to wrap onto the next line as needed */
+            justify-content: space-around; /* Distributes space between and around content items */
+            width: 100%; /* Ensures the flex container takes up all horizontal space of its parent */
+            max-width: 100%; /* Ensures the section does not exceed the width of its parent */
+            box-sizing: border-box; /* Includes padding and border in the width and height */
+        }
+
+        .info-item {
+            flex: 1 1 20%; /* Each item can grow and shrink but starts with 20% of the flex container's width */
+            margin: 10px; /* Adds some space around each item */
+            box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+            min-width: 180px; /* Prevents the items from becoming too small on narrower screens */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .info-item {
+                flex: 1 1 50%; /* Adjust to show two items per row on smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .info-item {
+                flex: 1 1 100%; /* Stacks the items vertically on very small screens */
+            }
+        }
+        /* Additional spacing for the Health Benefits section */
+        .info-section {
+            padding: 20px;
+            background-color: #fff; /* Optional: Change color as needed */
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            border-radius: 8px; /* Rounded corners */
+            margin: 20px auto; /* Centering the section */
+            width: 90%; /* Adjust width as needed */
+        }
+
+        .info-item {
+            margin-bottom: 40px; /* Adds a 40px gap between each info item */
+        }
+
+        .info-item:last-child {
+            margin-bottom: 0; /* Removes the margin from the last item to maintain padding consistency */
+        }
+
+        .icon {
+            width: 150px; /* Adjust size as needed */
+            height: 150px;
+            margin-bottom: 20px; /* Adds space between the icon and the heading */
+        }
+
+        .info-item h3 {
+            margin-bottom: 10px; /* Adds space between the heading and the paragraph */
+        }
+
+        .info-item p {
+            text-align: justify; /* Improves readability of longer texts */
+            line-height: 1.6; /* Increases line height for better text flow */
+        }
+        /* Style adjustments for the Health Benefits section with borders */
+        .info-section {
+            padding: 20px;
+            background-color: #fff; /* Light background to contrast with the border */
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for depth */
+            border-radius: 8px; /* Rounded corners for a softer look */
+            margin: 20px auto; /* Centers the section on the page */
+            width: 90%; /* Adjust width as needed */
+            border: 1px solid #ccc; /* Light grey border around the entire section */
+        }
+
+        .info-item {
+            padding: 20px; /* Padding inside each item for spacing the content away from the borders */
+            border: 2px solid #eaeaea; /* Light grey border for each item */
+            margin-bottom: 40px; /* Space between each item */
+            border-radius: 8px; /* Rounded corners for each item */
+        }
+
+        .info-item:last-child {
+            margin-bottom: 0; /* Removes the bottom margin from the last item */
+        }
+
+        .icon {
+            width: 150px; /* Adjust icon size as needed */
+            height: 150px;
+            margin-bottom: 20px; /* Space between the icon and the text */
+            border-radius: 75px; /* Fully rounded icon */
+        }
+
+        .info-item h3 {
+            margin-bottom: 10px; /* Space between the heading and the paragraph */
+        }
+
+        .info-item p {
+            text-align: justify; /* Justifies the text for a clean alignment */
+            line-height: 1.6; /* Improves readability with increased line height */
+        }
+        h2 {
+            color: #3a5a40;
+            text-align: center;
+            margin: 20px 0;
+        }
+        #our-process {
+            background-color: #f7f7f7;
+            padding: 20px;
+            margin: 20px auto;
+            width: 90%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #our-process h2, #our-process h3 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        #our-process p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        #our-process {
+            background-color: #f7f7f7;
+            padding: 20px;
+            margin: 20px auto;
+            width: 90%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #our-process h2 {
+            color: #333;
+            margin-bottom: 30px; /* More space after the main title */
+        }
+
+        .process-block {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px; /* Space between blocks */
+            border-radius: 8px; /* Rounded corners for blocks */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .process-block h3 {
+            color: #3a5a40;
+            margin-bottom: 10px; /* Space between header and paragraph within blocks */
+        }
+
+        .process-block p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        #sustainability {
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin: 20px auto;
+            width: 90%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        #our-process {
+            background-color: #f7f7f7;
+            padding: 20px;
+            margin: 20px auto;
+            width: 90%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .process-block {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .process-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 75px;
+            margin-right: 20px;
+            object-fit: cover;
+        }
+
+        .process-content {
+            flex: 1;
+        }
+
+        .process-content h3 {
+            color: #3a5a40;
+            margin-bottom: 10px;
+        }
+
+        .process-content p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: justify;
+        }body {
+             font-family: Arial, sans-serif;
+             margin: 0;
+             padding: 0;
+             background: #f4f4f4;
+             color: #333;
+         }
+
+        header, footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .slider {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slider img {
+            width: 100%;
+            height: 300px;
+            display: block;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+
+        .product {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            width: 30%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .product h2 {
+            color: #333;
+        }
+
+        button {
+            background-color: #5c9210;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #4a7c0f;
+        }
+
+        @media (max-width: 600px) {
+            .product {
+                width: 100%;
+            }
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+
+
+
+
+
+
     </style>
 </head>
 <body>
 <header>
     <div class="header-content">
-        <h1>Narasimha Wood Pressed Oils</h1>
+        <img src="img_5.png" alt="Narasimha Wood Pressed Oils" class="logo">
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -221,38 +545,108 @@
         </div>
     </div>
 </section>
-
+<h2>Health Benefits of Wood-Pressed Oils</h2>
 <section id="health-benefits">
     <div class="info-section">
-        <h2>Health Benefits of Wood-Pressed Oils</h2>
         <div class="info-item">
-            <img src="img.png" alt="Nutrients Icon" class="icon">
+            <img src="img_6.png" alt="Nutrients Icon" class="icon">
             <h3>Higher Nutrient Retention</h3>
-            <p>More natural nutrients are preserved due to our low-temperature pressing, ensuring that the vital enzymes and vitamins are intact, offering you the full health benefits of the seeds.</p>
+            <p>The gentle pressing at low temperatures ensures that essential vitamins, enzymes, and nutrients are not destroyed by heat, making these oils richer in nutritional content.</p>
         </div>
         <div class="info-item">
             <img src="img_2.png" alt="Antioxidants Icon" class="icon">
             <h3>Rich in Antioxidants</h3>
-            <p>Antioxidants play a crucial role in maintaining your health by fighting free radicals, which can cause oxidative stress leading to chronic diseases.</p>
+            <p>These oils maintain high levels of antioxidants which help in combating oxidative stress and reducing the risk of chronic diseases like heart disease and cancer.</p>
         </div>
         <div class="info-item">
             <img src="img_1.png" alt="No Additives Icon" class="icon">
-            <h3>No Harmful Additives</h3>
-            <p>Our oils are completely free from chemicals and preservatives, making them a healthier choice for your family's diet.</p>
+            <h3>Free from Harmful Additives</h3>
+            <p>Since there is no use of chemicals or high heat in the extraction process, wood-pressed oils do not contain any synthetic additives, preservatives, or trans fats.</p>
         </div>
         <div class="info-item">
-            <img src="icon-flavor.svg" alt="Flavor Icon" class="icon">
+            <img src="img_3.png" alt="Flavor Icon" class="icon">
             <h3>Better Flavor and Aroma</h3>
-            <p>The authentic flavors and aromas of the oilseeds are maintained, enhancing your cooking and ensuring a delightful taste experience.</p>
+            <p>The natural flavors and aromas of the seeds or nuts are preserved in the oil, enhancing the taste and sensory experience of meals.</p>
         </div>
         <div class="info-item">
-            <img src="icon-fats.svg" alt="Healthy Fats Icon" class="icon">
+            <img src="img_4.png" alt="Healthy Fats Icon" class="icon">
             <h3>Healthy Fats</h3>
-            <p>Essential fatty acids like omega-3 and omega-6 are well-preserved, promoting heart health, supporting brain function, and maintaining skin vitality.</p>
+            <p>Wood-pressed oils provide essential fatty acids, including omega-3 and omega-6, which are crucial for maintaining heart health, supporting brain function, and promoting healthy skin.</p>
+        </div>
+        <div class="info-item">
+            <img src="img_5.png" alt="Heart Health Icon" class="icon">
+            <h3>Improved Heart Health</h3>
+            <p>These oils generally contain higher levels of monounsaturated and polyunsaturated fats and lower levels of unhealthy saturated fats, contributing to better cardiovascular health.</p>
+        </div>
+        <div class="info-item">
+            <img src="img_6.png" alt="Weight Management Icon" class="icon">
+            <h3>Supports Weight Management</h3>
+            <p>The healthier fat profile can help in managing weight effectively when used as part of a balanced diet.</p>
+        </div>
+        <div class="info-item">
+            <img src="img_7.png" alt="Anti-inflammatory Icon" class="icon">
+            <h3>Anti-inflammatory Properties</h3>
+            <p>The natural properties of wood-pressed oils include anti-inflammatory effects, which can help reduce inflammation in the body, benefiting conditions such as arthritis.</p>
+        </div>
+        <div class="info-item">
+            <img src="img_8.png" alt="Skin Health Icon" class="icon">
+            <h3>Enhances Skin Health</h3>
+            <p>The high nutrient and antioxidant content can have a positive effect on skin, enhancing its elasticity and hydration, and preventing premature aging.</p>
+        </div>
+        <div class="info-item">
+            <img src="img_9.png" alt="Digestive Health Icon" class="icon">
+            <h3>Digestive Health Benefits</h3>
+            <p>These oils are easier on the stomach compared to heavily processed oils, helping in better digestion and overall gut health.</p>
         </div>
     </div>
 </section>
-
+<section id="our-process">
+    <div class="container">
+        <h2>Our Process: From Seed to Bottle</h2>
+        <div class="process-block">
+            <img src="img_sourcing.png" alt="Sourcing Ingredients" class="process-image">
+            <div class="process-content">
+                <h3>Sourcing Ingredients</h3>
+                <p>We carefully select the finest seeds and nuts for our oils, ensuring that they are of the highest quality and purity. Our ingredients are sourced from local farmers and suppliers who share our commitment to sustainability and ethical practices.</p>
+            </div>
+        </div>
+        <div class="process-block">
+            <img src="img_pressing.png" alt="Traditional Wood Pressing" class="process-image">
+            <div class="process-content">
+                <h3>Traditional Wood Pressing Technique</h3>
+                <p>Our oils are extracted using a traditional wood pressing technique that has been passed down through generations. This method involves crushing the seeds or nuts with a wooden press to extract the oil, preserving its natural flavors and nutrients.</p>
+            </div>
+        </div>
+        <div class="process-block">
+            <img src="img_filtration.png" alt="Natural Filtration" class="process-image">
+            <div class="process-content">
+                <h3>Natural Filtration and Settling</h3>
+                <p>After extraction, the oil is allowed to naturally settle and filter, removing any impurities or sediments. This process ensures that the oil is pure and free from contaminants, maintaining its quality and freshness.</p>
+            </div>
+        </div>
+        <div class="process-block">
+            <img src="img_bottling.png" alt="Bottling and Packaging" class="process-image">
+            <div class="process-content">
+                <h3>Bottling and Packaging</h3>
+                <p>Once the oil has been extracted and filtered, it is carefully bottled and packaged to preserve its freshness and flavor. Our bottles are designed to protect the oil from light and air, ensuring that it remains pure and potent until it reaches your kitchen.</p>
+            </div>
+        </div>
+        <div class="process-block">
+            <img src="img_quality.png" alt="Quality Assurance" class="process-image">
+            <div class="process-content">
+                <h3>Quality Assurance</h3>
+                <p>Before our oils are ready for sale, they undergo rigorous quality assurance checks to ensure that they meet our high standards of purity and freshness. We take pride in delivering the finest wood pressed oils to our customers, with a commitment to quality and excellence.</p>
+            </div>
+        </div>
+        <div class="process-block">
+            <img src="img_sustainability.png" alt="Sustainability and Eco-Friendly Practices" class="process-image">
+            <div class="process-content">
+                <h3>Sustainability and Eco-Friendly Practices</h3>
+                <p>At Wooden Oils, we are dedicated to sustainability and eco-friendly practices. We work closely with local farmers and suppliers to support ethical sourcing and production methods that minimize our environmental impact. By choosing our wood pressed oils, you are making a conscious choice to support a healthier planet and a more sustainable future.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section id="sustainability">
     <div class="info-section">
