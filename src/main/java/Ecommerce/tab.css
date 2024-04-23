@@ -1,0 +1,40 @@
+/* Tablet Styles */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    body {
+        font-size: 16px; /* Increased font size for readability on larger screens */
+    }
+
+    header {
+        padding: 15px 10%; /* More padding for larger devices */
+    }
+
+    .header-content h1 {
+        font-size: 24px; /* Larger font size for headers */
+    }
+
+    nav ul {
+        flex-direction: row; /* Keeps nav items in a row at tablet sizes */
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin-right: 20px; /* Space between nav items */
+    }
+
+    .info-section {
+        padding: 20px; /* More padding for better layout */
+    }
+
+    .info-item h3 {
+        font-size: 22px; /* Adjust heading size for better visibility */
+    }
+
+    .info-item p {
+        font-size: 16px; /* Larger font size for text */
+    }
+
+    .icon {
+        width: 200px; /* Larger icons for better visibility */
+        height: 200px;
+    }
+}
