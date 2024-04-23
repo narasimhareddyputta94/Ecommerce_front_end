@@ -1,40 +1,24 @@
-/* Mobile Styles */
-@media only screen and (max-width: 480px) {
-    body {
-        font-size: 14px; /* Slightly smaller font size for better readability on small screens */
-    }
-
-    header {
-        padding: 10px 5%; /* Reduces padding and sets it relative to screen size */
-    }
-
-    .header-content h1 {
-        font-size: 20px; /* Smaller font size for the header */
-    }
-
-    nav ul {
-        flex-direction: column; /* Stacks nav items vertically */
-        align-items: center;
+/* Mobile-specific styles */
+@media (max-width: 600px) {
+    header .header-content {
+        flex-direction: column;
     }
 
     nav ul li {
-        margin-bottom: 10px; /* Adds space between nav items */
+        display: block;
+        margin-top: 10px;
     }
 
-    .info-section {
-        padding: 10px; /* Smaller padding */
+    .header-content img.logo {
+        margin-bottom: 10px;
     }
 
-    .info-item h3 {
-        font-size: 18px; /* Smaller heading size for readability */
+    .product-grid {
+        grid-template-columns: 1fr;
     }
 
-    .info-item p {
-        font-size: 14px; /* Adjust font size for body text */
-    }
-
-    .icon {
-        width: 150px; /* Smaller icons */
-        height: 150px;
+    .info-item, .product {
+        padding: 10px;
+        margin-bottom: 20px;
     }
 }
