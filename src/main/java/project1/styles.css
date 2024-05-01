@@ -5,5 +5,29 @@
 }
 header {
     height: 70vh;
-    background-color: #20e1ad;
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0,0,0,0.3)),
+            url(background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    color: white;
+    background-color: #ff0000;
+    text-decoration: none;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.4s, background-color 0.4s;
+}
+.btn_empty {
+    background-color: transparent;
+    border: 1px solid #ff0000;
+}
+.btn:hover {
+   transform: scale(1.1);
 }
