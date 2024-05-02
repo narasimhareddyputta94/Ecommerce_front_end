@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 header {
     height: 70vh;
     background-image:
@@ -31,3 +32,4 @@ header {
 .btn:hover {
    transform: scale(1.1);
 }
+
