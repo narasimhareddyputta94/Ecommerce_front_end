@@ -6,7 +6,7 @@
 }
 
 html {
-    font-size: 100%; /* Equivalent to 16px */
+    font-size: 16px; /* 100% of 16px */
 }
 
 body {
@@ -31,7 +31,7 @@ nav {
     position: absolute;
     top: 0;
     width: 100%;
-    padding: 1.25rem 3.125rem;
+    padding: 20px 40px;
     background: rgba(0, 0, 0, 0.7);
 }
 
@@ -42,38 +42,37 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 1.875rem;
+    margin-left: 30px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: 500;
-    letter-spacing: 0.0625rem;
+    letter-spacing: 1px;
 }
 
 nav ul li a:hover, nav ul li a:focus {
     color: #a61616;
-    padding-bottom: 0.3125rem;
-    border-bottom: 0.125rem solid #a61616; /* Ensure color consistency */
+    padding-bottom: 5px;
+    border-bottom: 2px solid #a61616;
 }
 
 main h1 {
     color: #b63333;
-    font-size: 3rem;
-    margin: 1.25rem 0;
+    font-size: 3rem; /* 48px */
+    margin: 20px 0;
 }
 
 .btn, .btn_empty {
-    padding: 0.625rem 1.25rem;
+    padding: 10px 20px;
     text-decoration: none;
-    border-radius: 0.3125rem;
-    font-size: 1rem;
+    border-radius: 5px;
+    font-size: 1rem; /* 16px */
     text-transform: uppercase;
     font-weight: bold;
-    margin: 0.625rem;
-    border: 0.125rem solid transparent;
-    transition: all 0.3s ease-in-out;
+    margin: 10px;
+    border: 2px solid transparent;
 }
 
 .btn {
@@ -99,73 +98,79 @@ main h1 {
 }
 
 .features, .contactus {
-    padding: 1rem 1.25rem;
+    padding: 20px 25px;
     text-align: center;
-    margin-bottom: 1.25rem; /* Added margin-bottom for consistent spacing */
+    margin-bottom: 25px;
 }
-.features{
-    background: #f4f4f4;
-    justify-content: center;
-}
-.features.h2{
+
+.features.h2, .contactus h2 {
     color: #a20505;
-    font-size: 2rem;
-    text-align: center;
-    /* Added margin-bottom for consistent spacing */
-    margin: 1.25rem 2rem;
-}
- .contactus h2 {
-    color: #a20505;
-    font-size: 2rem;
-    margin: 1.25rem 2rem;
-    text-align: center;
+    font-size: 2rem; /* 32px */
+    margin: 20px 40px;
 }
 
 .p, .contactus .p {
     text-align: center;
-    font-size: 1.2rem;
-    margin: 1.25rem 0;
+    font-size: 1.2rem; /* 19.2px */
+    margin: 20px 0;
 }
 
 .container-parent {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row; /* Default flex-direction */
-    flex-wrap: wrap; /* Allow wrapping */
-    gap: 1.25rem;
-    min-width: 25rem;
-    margin-bottom: 1rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
 }
 
 .container {
     display: flex;
     justify-content: center;
-    padding: 1.25rem;
+    padding: 20px;
     background: white;
-    border-radius: 0.3125rem;
-    box-shadow: 0 0.625rem 1.25rem rgba(0,0,0,0.1);
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     width: 30%;
-    min-width: 15rem;
-    transition: all 0.3s ease-in-out;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 0.625rem;
-
+    min-width: 300px;
 }
 
 .container:hover {
-    transform: translateY(-0.625rem);
-    box-shadow: 0 1.25rem 2.5rem rgba(0,0,0,0.1);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
 .footer {
     text-align: center;
-    color: white; /* Corrected property */
-    background: #b4a8a8;
-    padding: 1rem 0; /* Consolidated padding */
+    color: white;
+    background: #444;
+    padding: 20px 0;
 }
 
+/* Media Queries for responsive design */
+@media (max-width: 64rem) { /* 1024px */
+    html {
+        font-size: 14px; /* Scales down font size */
+    }
+
+    header {
+        height: 60vh;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .container {
+        width: 100%;
+    }
+}
 @media (max-width: 48rem) { /* Adjustments for smaller screens */
     header, .features, .footer {
         padding: 0.625rem;

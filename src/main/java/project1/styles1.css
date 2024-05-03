@@ -1,0 +1,111 @@
+/* Base styling */
+html {
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    max-width: 1200px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+header {
+    background: #0044cc;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+section {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer {
+    background: #222;
+    color: #ddd;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Form styling */
+form input, form textarea {
+    width: 90%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+form button {
+    background-color: #0066ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    nav ul li {
+        display: block;
+        margin-top: 10px;
+        margin-right: 0;
+    }
+
+    form input, form textarea, form button {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    header {
+        padding: 0.5rem 0;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    nav ul li {
+        text-align: center;
+        display: block;
+    }
+
+    form {
+        width: 100%;
+        padding: 0 15px;
+    }
+}
