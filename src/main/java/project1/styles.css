@@ -53,9 +53,9 @@ nav ul li a {
 }
 
 nav ul li a:hover, nav ul li a:focus {
-    color: #ffcc00;
+    color: #a61616;
     padding-bottom: 0.3125rem;
-    border-bottom: 0.125rem solid #ffcc00;
+    border-bottom: 0.125rem solid #a61616; /* Ensure color consistency */
 }
 
 main h1 {
@@ -98,72 +98,77 @@ main h1 {
     color: white;
 }
 
-.features {
-    padding: 2.5rem 1.25rem;
+.features, .contactus {
+    padding: 1rem 1.25rem;
     text-align: center;
-    height: 20rem;
+    margin-bottom: 1.25rem; /* Added margin-bottom for consistent spacing */
 }
-
-.h2 {
+.features{
+    background: #f4f4f4;
+    justify-content: center;
+}
+.features.h2{
     color: #a20505;
     font-size: 2rem;
-    margin: 1.25rem 0;
+    text-align: center;
+    /* Added margin-bottom for consistent spacing */
+    margin: 1.25rem 2rem;
+}
+ .contactus h2 {
+    color: #a20505;
+    font-size: 2rem;
+    margin: 1.25rem 2rem;
+    text-align: center;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    transition: transform 0.3s ease-in-out;
-    padding: 1.25rem;
-    background: white;
-    border-radius: 0.3125rem;
-    box-shadow: 0 0.625rem 1.25rem rgba(0,0,0,0.1);
-    width: 33%;
+.p, .contactus .p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 1.25rem 0;
 }
 
 .container-parent {
     display: flex;
     justify-content: center;
     align-items: center;
-    justify-content: space-around;
-    justify-content: space-between;
+    flex-direction: row; /* Default flex-direction */
+    flex-wrap: wrap; /* Allow wrapping */
     gap: 1.25rem;
     min-width: 25rem;
+    margin-bottom: 1rem;
 }
 
-.h3 {
-    color: #a20505;
-    font-size: 2rem;
-    margin: 1.25rem 0;
-    text-align: center;
-}
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem;
+    background: white;
+    border-radius: 0.3125rem;
+    box-shadow: 0 0.625rem 1.25rem rgba(0,0,0,0.1);
+    width: 30%;
+    min-width: 15rem;
+    transition: all 0.3s ease-in-out;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0.625rem;
 
-.p {
-    text-align: center;
-    font-size: 1.2rem;
-    margin: 1.25rem 0;
 }
 
 .container:hover {
     transform: translateY(-0.625rem);
     box-shadow: 0 1.25rem 2.5rem rgba(0,0,0,0.1);
 }
-.features, .contactus {
-    margin-bottom: 1.25rem; /* Add more space at the bottom of sections */
-}
 
 .footer {
-    clear: both; /* Ensures that the footer will not overlap floated elements */
-    padding-top: 1.25rem; /* Adds padding to top of the footer for spacing */
-}
-.container-parent, .features, .contactus {
-    margin-bottom: 1rem; /* Add bottom margin to push footer down */
+    text-align: center;
+    color: white; /* Corrected property */
+    background: #b4a8a8;
+    padding: 1rem 0; /* Consolidated padding */
 }
 
-
-@media (max-width: 48rem) { /* 768px / 16px */
-    header {
-        height: 60vh;
+@media (max-width: 48rem) { /* Adjustments for smaller screens */
+    header, .features, .footer {
+        padding: 0.625rem;
     }
 
     nav ul {
@@ -174,25 +179,8 @@ main h1 {
         margin: 0.625rem 0;
     }
 
-    .container-parent {
+    .container-parent, .container {
         flex-direction: column;
-    }
-
-    .container {
         width: 100%;
-        margin: 0.625rem 0;
     }
-    .container-parent {
-        flex-direction: column;
-    }
-
-    .container {
-        width: 100%;
-        margin: 0.625rem 0;
-    }
-
-    header, .features, .footer {
-        padding: 0.625rem; /* Increase padding for smaller screens */
-    }
-
 }
