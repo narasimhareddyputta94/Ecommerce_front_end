@@ -16,6 +16,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    position: relative;
 }
 
 .logo {
@@ -25,64 +26,72 @@ body {
     font-weight: bold;
 }
 
-.nav-list {
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger {
+    display: block;
+    height: 3px;
+    width: 25px;
+    background: #fff;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+nav ul {
     list-style: none;
     display: flex;
+    justify-content: flex-end;
 }
 
-.nav-list li {
-    padding: 0 15px;
+nav ul li {
+    margin-left: 20px;
 }
 
-.nav-list a {
+nav ul li a {
     text-decoration: none;
     color: white;
     font-size: 1.1rem;
     transition: color 0.3s;
 }
 
-.nav-list a:hover {
+nav ul li a:hover {
     color: #4CAF50;
 }
 
-.nav-toggle {
-    display: none;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 25px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-.nav-toggle:focus {
-    outline: none;
-}
-
-.hamburger {
-    display: block;
-    height: 3px;
-    width: 100%;
-    background: white;
-    border-radius: 10px;
-    transition: all 0.3s linear;
-}
-
 @media (max-width: 768px) {
-    .nav-list {
+    .nav-toggle {
+        display: block;
+    }
+
+    nav ul {
         flex-direction: column;
         width: 100%;
-        display: none; /* hidden by default */
-        padding: 20px;
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 10px;
+        width: 100%;
     }
 
-    .nav-list.active {
+    nav ul.active {
         display: flex;
     }
 
-    .nav-toggle {
-        display: flex;
+    nav ul li {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    nav ul li a {
+        padding: 10px 20px;
+        display: block;
     }
 }
 
